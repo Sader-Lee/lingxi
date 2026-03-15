@@ -145,55 +145,70 @@ footer{
   align-items: center;
   padding: 90px 20px;
   color: white;
-  
+  box-sizing: border-box;
   margin-top: 150px; 
   width:100vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 
 }
 .chat-container{
     display:flex;
-    text-align: center;
     justify-content: center;
-   
     width:100%;
+    position: relative;
+
+   
     
 }
 .chat-form{
 display:flex;
   gap: 12px;           
   width: 60%; 
+  justify-content: flex-end;
+
  
-  text-align: center;
-  justify-content: center;
+
 
 }
 .input-area{
   flex: 1; 
   position: relative; 
   display: flex;
-  align-items: center;
+  
 
 }
 
 
 form textarea{
-   flex:1;
+   flex:7;
     background-color: #2b3043;
   color: white;                       
   resize: none;                  
-  padding: 12px 24px;
-  margin-bottom: 20px;
+  padding: 12px 24px 12px 24px;
+  margin-bottom: 0px;
   border-radius: 24px;
    font-size: 20px;
    min-height: 56px;  
+   max-height: 180px;
   line-height: 28px; 
   outline: none;       
   border: none;
- 
+  overflow-y: auto; /* 新增：超过最大高度显示滚动条 */
+  height: auto; /* 新增：重置高度为自动，配合JS计算 */
+  padding-right: 80px;
   
 }
+
 form textarea::-webkit-scrollbar {
-  display: none;                
+  width: 4px; /* 修改：显示细滚动条，原display:none → 能滚动但不隐藏 */
+  background: transparent;             
+}
+
+form textarea::-webkit-scrollbar-thumb {
+  background: #444; /* 新增：滚动条滑块样式 */
+  border-radius: 2px;
 }
 
 body.lightmode .chat-form textarea
@@ -206,13 +221,43 @@ body.lightmode .chat-form textarea
 }
 
 .transfer-button{
+    flex:1;
     position: absolute;
   right: 20px; 
-  bottom:32px;
+  bottom:16px;
   background-color:#2b3043 ;
   border:none;
   border-radius: 50%;
+  width: 28px; 
+  height: 28px; 
+  display: flex; 
+
+
 }
+.input-area.has-content .transfer-button{
+
+   transform: translateX(-48px);
+}
+
+.submit-button{
+      flex:1;
+    position: absolute;
+  right: 3px; 
+  bottom:3px;
+  background-color:#1d7efd ;
+  border:none;
+  border-radius: 50%;
+  width: 50px; 
+  height: 50px; 
+  display:none; 
+  
+  }
+.input-area.has-content .submit-button{
+    display:flex;
+}
+
+
+
 body.lightmode .transfer-button{
     background:#ffffff;
     color:#212529;
@@ -222,12 +267,15 @@ body.lightmode .transfer-button{
 
 .themeToggle-button{
     flex:0 0 auto;
+     position: absolute;
     width: 54px; 
     height: 54px;
     padding: 6px;  
     background-color: #2b3043; 
     border-radius: 50%;
     border: none;  
+    right: 255px;       
+    bottom: 0px;
 
 
           
@@ -236,12 +284,15 @@ body.lightmode .transfer-button{
 
 .delete-button{
    flex:0,0 auto;
+    position: absolute;
     width: 54px;         
     height: 54px;
     padding: 6px;  
     background-color: #2b3043; 
     border-radius: 50%; 
     border: none;   
+    right: 180px;       
+    bottom: 0px;
 }
 
 body.lightmode .themeToggle-button,
