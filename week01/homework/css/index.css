@@ -1,0 +1,250 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+
+}
+body {
+  background-color: #131622;
+  height:100vh;
+}
+body.lightmode{
+    color:#1a1a1a;
+    background-color: #fcfcfc;
+
+}
+
+header { margin-bottom: 130px; margin-left:280px;margin-top:70px;}
+
+header h1 { color: #8b94ff; font-size: 48px; margin-bottom: 16px; }
+
+body.lightmode header h1{color:#000000}
+
+header p { font-size: 20px; opacity: 0.9;color:white }
+
+body.lightmode header p{color:#000000}
+
+.all-container{
+    display:flex;
+    min-width: 100vw;
+    justify-content: center; 
+    align-items: center;
+    
+
+  
+    
+}
+.card-container{
+    display:flex;
+    width:70vw;
+    height:20vh;
+    gap:30px;
+    
+}
+
+
+.skill-container{
+    flex:1;
+    color: white;
+    background-color:#2b3043 ;
+    aspect-ratio: 3 / 2;
+    border-radius: 16px;
+    padding:20px;
+    position:relative;
+}
+
+.pencil-icon{
+    position: absolute;  
+            bottom: 16px;        
+            right: 16px;         
+            width: 36px;         
+            height: 36px;
+            padding: 6px; 
+           background-color: #101623; 
+           border-radius: 50%; 
+}
+
+.idea-container{
+    flex:1;
+    color: white;
+    background-color:#2b3043;
+    aspect-ratio: 3 / 2;
+    border-radius: 16px;
+    padding:20px;
+    position:relative;
+}
+.lightbulb-icon{
+    position: absolute;  
+            bottom: 16px;        
+            right: 16px;         
+             width: 36px;         
+            height: 36px;
+            padding: 6px;  
+           background-color: #101623; 
+           border-radius: 50%;  
+          
+               
+
+}
+.plan-container{
+    flex:1;
+    color: white;
+    background-color:#2b3043;
+    aspect-ratio: 3 / 2;
+    border-radius: 16px;
+    padding:20px;
+    position:relative;
+}
+.compass-icon{
+    position: absolute;  
+            bottom: 16px;        
+            right: 16px;         
+             width: 36px;         
+            height: 36px;
+            padding: 6px; 
+           background-color: #101623; 
+           border-radius: 50%;     
+
+}
+.advice-container{
+    flex:1;
+    color: white;
+    background-color:#2b3043;
+    aspect-ratio: 3 / 2;
+    border-radius: 16px;
+    padding:20px;
+    position:relative;
+}
+.wrench-icon{
+    position: absolute;  
+            bottom: 16px;        
+            right: 16px;         
+             width: 36px;         
+            height: 36px;
+            padding: 6px;  
+           background-color: #101623; 
+           border-radius: 50%; 
+
+}
+body.lightmode .skill-container,body.lightmode .idea-container,
+body.lightmode .plan-container,body.lightmode .advice-container{
+    background-color: #f3f4f6;
+    color:#212529;
+}
+
+body.lightmode .pencil-icon,body.lightmode .lightbulb-icon,
+body.lightmode .compass-icon,body.lightmode .wrench-icon{
+    background-color: #e9ecef; 
+    color: #495057;
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 90px 20px;
+  color: white;
+  
+  margin-top: 150px; 
+  width:100vw;
+
+}
+.chat-container{
+    display:flex;
+    text-align: center;
+    justify-content: center;
+   
+    width:100%;
+    
+}
+.chat-form{
+display:flex;
+  gap: 12px;           
+  width: 60%; 
+ 
+  text-align: center;
+  justify-content: center;
+
+}
+.input-area{
+  flex: 1; 
+  position: relative; 
+  display: flex;
+  align-items: center;
+
+}
+
+
+form textarea{
+   flex:1;
+    background-color: #2b3043;
+  color: white;                       
+  resize: none;                  
+  padding: 12px 24px;
+  margin-bottom: 20px;
+  border-radius: 24px;
+   font-size: 20px;
+   min-height: 56px;  
+  line-height: 28px; 
+  outline: none;       
+  border: none;
+ 
+  
+}
+form textarea::-webkit-scrollbar {
+  display: none;                
+}
+
+body.lightmode .chat-form textarea
+{
+    background:#ffffff;
+    color:#262626;
+    border-color: #8ab4f8;
+  box-shadow: 0 0 8px 2px rgba(138, 180, 248, 0.4);
+
+}
+
+.transfer-button{
+    position: absolute;
+  right: 20px; 
+  bottom:32px;
+  background-color:#2b3043 ;
+  border:none;
+  border-radius: 50%;
+}
+body.lightmode .transfer-button{
+    background:#ffffff;
+    color:#212529;
+
+}
+
+
+.themeToggle-button{
+    flex:0 0 auto;
+    width: 54px; 
+    height: 54px;
+    padding: 6px;  
+    background-color: #2b3043; 
+    border-radius: 50%;
+    border: none;  
+
+
+          
+            
+}
+
+.delete-button{
+   flex:0,0 auto;
+    width: 54px;         
+    height: 54px;
+    padding: 6px;  
+    background-color: #2b3043; 
+    border-radius: 50%; 
+    border: none;   
+}
+
+body.lightmode .themeToggle-button,
+body.lightmode .delete-button{
+    background-color: #e9ecef;
+}
