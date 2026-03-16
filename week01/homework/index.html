@@ -41,12 +41,19 @@
 
 <footer>
 <div class="chat-container">
-<form   class="chat-form">
+<form  class="chat-form">
     <div class="input-area">
     <textarea name="question" id="question" rows="1"  placeholder="有问题尽管问我"></textarea>
-    <button class="transfer-button" id="transfer-button"> <img src="./assets/paperclip.svg"> </button>
+    <button class="transfer-button" id="transfer-button" type="button"> <img src="./assets/paperclip.svg"> </button>
     <button class="submit-button" id="submit-button"  ><img src="./assets/arrow-up.svg"></button>
+    <input type="file" id="image-input"  accept="image/*">
+    <div id="preview-container">
+        <img id="preview-image" src="">
     </div>
+    </div>
+
+    
+    
 </form>
 <button  type="button" id="theme-toggle" class="themeToggle-button"><img src="./assets/moon.svg" class="moon-icon" alt="切换到白天模式"></button>
     <button class="delete-button" id="delete-button"><img src="./assets/trash.svg" class="trash-icon"></button>
@@ -56,6 +63,10 @@
 <p>内容由AI大模型生成，请仔细甄别</p>
 </footer>
 
+
+<div id="image-viewer">
+  <img id="large-image" src="" alt="查看大图" >
+</div>
 
 </body>
 

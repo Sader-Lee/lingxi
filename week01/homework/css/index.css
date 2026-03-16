@@ -151,18 +151,23 @@ footer{
   position: fixed;
   bottom: 0;
   left: 0;
+  gap:10px;
 
 }
 .chat-container{
     display:flex;
-    justify-content: center;
-    width:100%;
-    position: relative;
+    width:70%;
+    flex-direction: row;
+    gap:50px;
+    align-items: flex-end;
+    
+  
 
    
     
 }
 .chat-form{
+    flex:10;
 display:flex;
   gap: 12px;           
   width: 60%; 
@@ -231,12 +236,42 @@ body.lightmode .chat-form textarea
   width: 28px; 
   height: 28px; 
   display: flex; 
+  z-index: 1;
 
 
 }
 .input-area.has-content .transfer-button{
 
    transform: translateX(-48px);
+}
+#preview-container{
+   
+    position: absolute;
+    right: 20px; 
+    bottom:3px;
+    border:none;
+    border-radius: 50%;
+    width: 50px; 
+    height: 50px; 
+    display: none;
+    overflow: hidden;
+    z-index: 10;
+}
+.input-area.has-content #preview-container{
+
+   transform: translateX(-48px);
+}
+
+
+#preview-image{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+
+#image-input{
+    display:none ;
 }
 
 .submit-button{
@@ -252,6 +287,7 @@ body.lightmode .chat-form textarea
   display:none; 
   
   }
+
 .input-area.has-content .submit-button{
     display:flex;
 }
@@ -266,36 +302,50 @@ body.lightmode .transfer-button{
 
 
 .themeToggle-button{
-    flex:0 0 auto;
-     position: absolute;
+    flex:none;
+     
     width: 54px; 
     height: 54px;
     padding: 6px;  
     background-color: #2b3043; 
     border-radius: 50%;
     border: none;  
-    right: 255px;       
-    bottom: 0px;
-
-
-          
+    
             
 }
 
 .delete-button{
-   flex:0,0 auto;
-    position: absolute;
+   flex:none;
     width: 54px;         
     height: 54px;
     padding: 6px;  
     background-color: #2b3043; 
     border-radius: 50%; 
     border: none;   
-    right: 180px;       
-    bottom: 0px;
+    flex-shrink: 0;
 }
 
 body.lightmode .themeToggle-button,
 body.lightmode .delete-button{
     background-color: #e9ecef;
 }
+
+#image-viewer{
+position: fixed;
+top: 0; 
+left: 0; 
+width: 100%; 
+height: 100%; 
+background: rgba(0, 0, 0, 0.8); 
+display:none; 
+justify-content: center; 
+align-items: center; 
+z-index: 999;
+}
+#large-image{
+max-width: 90%; 
+max-height: 90%; 
+object-fit: contain;
+cursor: zoom-out;
+}
+
