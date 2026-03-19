@@ -71,7 +71,7 @@ display: flex;
 
         /*用户气泡 */
         .user-bubble {
-            background-color: #283045; 
+            background-color: #0084ff; 
             color: white; 
             margin-left: auto; 
            
@@ -113,7 +113,7 @@ display: flex;
   object-fit: cover;
 }
 .ai-content {
- 
+  background: #1e1e2e;
   padding: 12px 16px;
   border-radius: 0 16px 16px 16px;
   color: white;

@@ -71,7 +71,7 @@ display: flex;
 
         /*用户气泡 */
         .user-bubble {
-            background-color: #283045; 
+            background-color: #0084ff; 
             color: white; 
             margin-left: auto; 
            
@@ -80,16 +80,15 @@ display: flex;
 
         /*AI气泡*/
         .ai-bubble {
-           
+            background-color: white; 
             color: white; 
-            border: 1px; 
+            border: 1px solid #e5e5e5; 
             margin-right: auto; 
             border-bottom-left-radius: 4px;
              align-self: flex-start;
              display: flex;
              align-items: flex-start; 
               gap: 12px;
-              
         }
         /* 图片气泡样式 */
         .message-img {
@@ -113,7 +112,7 @@ display: flex;
   object-fit: cover;
 }
 .ai-content {
- 
+  background: #1e1e2e;
   padding: 12px 16px;
   border-radius: 0 16px 16px 16px;
   color: white;

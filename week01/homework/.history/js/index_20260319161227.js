@@ -259,10 +259,7 @@ document.addEventListener('DOMContentLoaded', function() {
       fileInput.value = '';
       previewContainer.style.display = 'none';
       adjustTextareaHeight(); 
-      updateButtonState();  
-      
-      const page = document.getElementById('page'); 
-    page.classList.remove('isHome');
+      updateButtonState();    
     }
   });
 

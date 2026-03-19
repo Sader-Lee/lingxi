@@ -26,25 +26,35 @@ body.lightmode header h1{color:#000000}
 header p { font-size: 20px; opacity: 0.9;color:white }
 
 body.lightmode header p{color:#000000}
-/* 默认状态（带 isHome）：显示首页，隐藏聊天页 */
-.page.isHome .homePage{
-  width:100%;
-  display: flex;
-  flex-direction: column ;
-}
-.page.isHome .chatPage{
-  width:100%;
-  display:none; /* 聊天页默认隐藏 */
+
+.page{
+    flex:1;
+    display:flex;
+    flex-direction: column;
 }
 
-/* 非首页状态（去掉 isHome）：隐藏首页，显示聊天页 */
-.page:not(.isHome) .homePage{
-  display: none; /* 隐藏首页 */
+.page .homePage{
+    display:none;
 }
-.page:not(.isHome) .chatPage{
-  display:flex;
-  width: 100%; /* 显示聊天页 */
+
+.page .chatPage{
+    display:flex;
+    width: 100%;
+    
 }
+
+
+.page.isHome .homePage{
+width:100%;
+}
+.page.isHome .chatPage{
+    width:100%;
+    display:none;
+
+}
+
+
+
 
 .chat-messages{
     flex:1;
@@ -71,7 +81,7 @@ display: flex;
 
         /*用户气泡 */
         .user-bubble {
-            background-color: #283045; 
+            background-color: #0084ff; 
             color: white; 
             margin-left: auto; 
            
@@ -80,16 +90,15 @@ display: flex;
 
         /*AI气泡*/
         .ai-bubble {
-           
-            color: white; 
-            border: 1px; 
+            background-color: white; 
+            color: white; /* 黑色文字 */
+            border: 1px solid #e5e5e5; 
             margin-right: auto; 
             border-bottom-left-radius: 4px;
              align-self: flex-start;
              display: flex;
              align-items: flex-start; 
               gap: 12px;
-              
         }
         /* 图片气泡样式 */
         .message-img {
@@ -113,7 +122,7 @@ display: flex;
   object-fit: cover;
 }
 .ai-content {
- 
+  background: #1e1e2e;
   padding: 12px 16px;
   border-radius: 0 16px 16px 16px;
   color: white;
@@ -145,10 +154,9 @@ display: flex;
 
 .all-container{
     display:flex;
-    min-width: 100%;
+    min-width: 100vw;
     justify-content: center; 
     align-items: center;
-    padding: 0 15px;
     
 
   
